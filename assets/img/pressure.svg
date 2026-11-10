@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" role="img" aria-labelledby="pr-t pr-d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="pr-t">Pressure: fore and aft along the board, and flex or extend</title>
+  <desc id="pr-d">Left: top view of a board with weight pressed toward the nose to lead into a turn. Right: two legs, one flexed to engage the edge and one extended to release it.</desc>
+
+  <defs>
+    <marker id="pr-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#1f6feb"/>
+    </marker>
+  </defs>
+
+  <line x1="450" y1="30" x2="450" y2="292" stroke="#dde5ec" stroke-width="1"/>
+
+  <!-- Panel A: fore/aft -->
+  <text x="225" y="48" text-anchor="middle" font-size="18" font-weight="700" fill="#17202a">Fore / aft</text>
+  <text x="225" y="68" text-anchor="middle" font-size="12.5" fill="#4a5a6a">where along the board you press</text>
+
+  <rect x="70" y="150" width="310" height="58" rx="12" fill="#f7fafc" stroke="#17202a" stroke-width="2.5"/>
+  <text x="60" y="146" font-size="11.5" fill="#4a5a6a">tail</text>
+  <text x="386" y="146" font-size="11.5" fill="#4a5a6a">nose</text>
+  <circle cx="215" cy="179" r="7" fill="#17202a"/>
+  <text x="215" y="205" text-anchor="middle" font-size="10.5" fill="#17202a">your weight</text>
+  <line x1="120" y1="179" x2="330" y2="179" stroke="#1f6feb" stroke-width="2.5" marker-end="url(#pr-arrow)"/>
+  <text x="225" y="252" text-anchor="middle" font-size="12.5" fill="#1f6feb">press toward the nose &#8594; the board leads into the turn</text>
+
+  <!-- Panel B: flex/extend -->
+  <text x="675" y="48" text-anchor="middle" font-size="18" font-weight="700" fill="#17202a">Flex / extend</text>
+  <text x="675" y="68" text-anchor="middle" font-size="12.5" fill="#4a5a6a">legs drive the board into the snow</text>
+
+  <line x1="520" y1="262" x2="830" y2="262" stroke="#dde5ec" stroke-width="3"/>
+
+  <g stroke="#17202a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <polyline points="600,150 578,212 600,258"/>
+  </g>
+  <circle cx="600" cy="145" r="8" fill="#17202a"/>
+  <line x1="628" y1="150" x2="628" y2="258" stroke="#17202a" stroke-width="3" stroke-dasharray="5 5"/>
+  <text x="600" y="292" text-anchor="middle" font-size="12.5" fill="#1a7f52">flex &#8594; engage</text>
+  <text x="600" y="112" text-anchor="middle" font-size="11.5" fill="#4a5a6a">sink</text>
+
+  <g stroke="#1f6feb" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <polyline points="740,150 734,205 740,258"/>
+  </g>
+  <circle cx="740" cy="145" r="8" fill="#1f6feb"/>
+  <line x1="768" y1="150" x2="768" y2="258" stroke="#1f6feb" stroke-width="3" stroke-dasharray="5 5"/>
+  <text x="740" y="292" text-anchor="middle" font-size="12.5" fill="#1f6feb">extend &#8594; release</text>
+  <text x="742" y="112" text-anchor="middle" font-size="11.5" fill="#4a5a6a">stand tall</text>
+</svg>

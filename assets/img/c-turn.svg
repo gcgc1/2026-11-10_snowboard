@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="ct-t ct-d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="ct-t">The C-turn, then linking</title>
+  <desc id="ct-d">Top view of a slope. A dashed fall line runs down the middle. A single C-shaped arc starts on a traverse, crosses the fall line, and finishes on the opposite traverse. Two of these back to back make linked S-turns.</desc>
+
+  <defs>
+    <marker id="ct-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#1f6feb"/>
+    </marker>
+  </defs>
+
+  <rect x="20" y="30" width="860" height="370" rx="12" fill="#f7fafc" stroke="#dde5ec" stroke-width="1.5"/>
+  <text x="40" y="54" font-size="12" fill="#4a5a6a">uphill</text>
+  <text x="40" y="388" font-size="12" fill="#4a5a6a">downhill</text>
+  <line x1="450" y1="66" x2="450" y2="384" stroke="#4a5a6a" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <text x="450" y="56" text-anchor="middle" font-size="12" font-weight="600" fill="#4a5a6a">fall line</text>
+
+  <path d="M180,110 Q450,360 720,260" fill="none" stroke="#1f6feb" stroke-width="3.4" stroke-linecap="round" marker-end="url(#ct-arrow)"/>
+
+  <circle cx="180" cy="110" r="6" fill="#1f6feb"/>
+  <text x="170" y="98" text-anchor="end" font-size="13" font-weight="700" fill="#17202a">Traverse in</text>
+  <text x="170" y="116" text-anchor="end" font-size="11.5" fill="#4a5a6a">on one edge</text>
+
+  <circle cx="450" cy="272" r="6" fill="#1f6feb"/>
+  <text x="462" y="286" font-size="13" font-weight="700" fill="#17202a">Commit through the fall line</text>
+  <text x="462" y="303" font-size="11.5" fill="#4a5a6a">(the scary bit)</text>
+
+  <circle cx="720" cy="260" r="6" fill="#1f6feb"/>
+  <text x="732" y="256" font-size="13" font-weight="700" fill="#17202a">Finish across</text>
+  <text x="732" y="273" font-size="11.5" fill="#4a5a6a">on the new edge</text>
+
+  <text x="450" y="398" text-anchor="middle" font-size="12" fill="#4a5a6a" font-style="italic">Two of these back to back = the linked S-turn. That is the whole goal.</text>
+</svg>

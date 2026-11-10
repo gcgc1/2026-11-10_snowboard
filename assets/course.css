@@ -1,0 +1,481 @@
+/* ============================================================
+   Snowboarding Fundamentals — shared course stylesheet
+   Tufte-inspired: quiet accents, serif body, generous margins.
+   Every lesson links this file. Edit here; every lesson updates.
+   ============================================================ */
+
+:root {
+  --ink:          #17202a;
+  --ink-soft:     #4a5a6a;
+  --paper:        #fbfcfd;
+  --rule:         #dde5ec;
+  --accent:       #1f6feb;
+  --accent-quiet: #eaf1fe;
+  --good:         #1a7f52;
+  --good-quiet:   #e7f6ee;
+  --bad:          #b3261e;
+  --bad-quiet:    #fdecea;
+  --warn:         #8a5a00;
+  --warn-quiet:   #fff6e6;
+  --measure:      68ch;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.0625rem;          /* 17px */
+  line-height: 1.62;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: calc(var(--measure) + 8rem);
+  margin: 0 auto;
+  padding: 2.4rem 1.5rem 5rem;
+}
+
+/* ---------- Navigation ---------- */
+
+.course-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: 0.9rem;
+  margin-bottom: 2.2rem;
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.01em;
+}
+.course-nav .course-name {
+  font-weight: 600;
+  color: var(--ink);
+}
+.course-nav .nav-links { display: flex; gap: 1.1rem; }
+.course-nav a { color: var(--accent); text-decoration: none; }
+.course-nav a:hover { text-decoration: underline; }
+
+/* ---------- Headings ---------- */
+
+h1, h2, h3, h4 {
+  font-family: var(--sans);
+  line-height: 1.2;
+  color: var(--ink);
+  font-weight: 650;
+}
+h1 {
+  font-size: 2.15rem;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.6rem;
+}
+h2 {
+  font-size: 1.32rem;
+  margin: 2.8rem 0 0.7rem;
+  padding-top: 0.4rem;
+}
+h3 {
+  font-size: 1.06rem;
+  margin: 1.9rem 0 0.5rem;
+}
+p, ul, ol { margin: 0 0 1.05rem; }
+ul, ol { padding-left: 1.35rem; }
+li { margin-bottom: 0.4rem; }
+li > ul, li > ol { margin-top: 0.4rem; margin-bottom: 0.4rem; }
+
+a { color: var(--accent); }
+strong { font-weight: 650; }
+
+.lede {
+  font-size: 1.22rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin-bottom: 1.6rem;
+}
+
+/* ---------- Lesson header ---------- */
+
+.lesson-meta {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+.pill {
+  display: inline-block;
+  background: var(--accent-quiet);
+  color: var(--accent);
+  font-weight: 650;
+  padding: 0.14rem 0.6rem;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Callouts ---------- */
+
+.callout {
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--accent);
+  background: #fff;
+  border-radius: 6px;
+  padding: 1rem 1.15rem;
+  margin: 1.5rem 0;
+}
+.callout > :last-child { margin-bottom: 0; }
+.callout .callout-label {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.45rem;
+}
+.callout--key   { border-left-color: var(--accent); }
+.callout--key .callout-label { color: var(--accent); }
+.callout--warn  { border-left-color: var(--warn); background: var(--warn-quiet); }
+.callout--warn .callout-label { color: var(--warn); }
+
+/* Practice / drill box */
+.drill {
+  border: 1px dashed var(--good);
+  background: var(--good-quiet);
+  border-radius: 6px;
+  padding: 1.05rem 1.2rem;
+  margin: 1.6rem 0;
+}
+.drill > :last-child { margin-bottom: 0; }
+.drill .drill-label {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--good);
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Phase strip (diagram) ---------- */
+
+.phase-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+  margin: 1.7rem 0;
+}
+.phase {
+  border: 1px solid var(--rule);
+  border-top: 4px solid var(--accent);
+  border-radius: 6px;
+  padding: 0.85rem 0.95rem;
+  background: #fff;
+}
+.phase .phase-no {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.phase .phase-name {
+  font-family: var(--sans);
+  font-weight: 650;
+  font-size: 0.98rem;
+  margin: 0.15rem 0 0.4rem;
+}
+.phase p { font-size: 0.92rem; margin: 0; color: var(--ink-soft); }
+
+/* ---------- Tables ---------- */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  font-family: var(--sans);
+  font-size: 0.92rem;
+}
+th, td {
+  text-align: left;
+  padding: 0.55rem 0.7rem;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+thead th {
+  border-bottom: 2px solid var(--ink);
+  font-weight: 650;
+}
+tbody tr:hover { background: #f6f9fc; }
+
+/* ---------- Quiz ---------- */
+
+.quiz { margin: 1.7rem 0 0.5rem; }
+.quiz-q {
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 1.05rem 1.15rem;
+  margin-bottom: 1rem;
+  background: #fff;
+}
+.quiz-prompt {
+  font-family: var(--sans);
+  font-weight: 650;
+  margin: 0 0 0.85rem;
+}
+.quiz-opts {
+  display: grid;
+  gap: 0.5rem;
+}
+.quiz-opt {
+  -webkit-appearance: none;
+  appearance: none;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  text-align: left;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: #fbfcfd;
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.12s ease, background 0.12s ease;
+}
+.quiz-opt:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-quiet); }
+.quiz-opt:disabled { cursor: default; opacity: 1; }
+.quiz-opt.is-correct { border-color: var(--good); background: var(--good-quiet); }
+.quiz-opt.is-wrong { border-color: var(--bad); background: var(--bad-quiet); }
+.quiz-opt.is-correct::after { content: " ✓"; color: var(--good); font-weight: 700; }
+.quiz-opt.is-wrong::after { content: " ✕"; color: var(--bad); font-weight: 700; }
+.quiz-explain {
+  margin: 0.85rem 0 0;
+  font-size: 0.93rem;
+  color: var(--ink-soft);
+  border-top: 1px solid var(--rule);
+  padding-top: 0.7rem;
+}
+.quiz-score {
+  font-family: var(--sans);
+  font-weight: 650;
+  padding: 0.7rem 0.9rem;
+  border-radius: 6px;
+  margin-top: 0.4rem;
+}
+.quiz-score.is-good { background: var(--good-quiet); color: var(--good); }
+.quiz-score.is-mixed { background: var(--warn-quiet); color: var(--warn); }
+
+/* ---------- Self-check (details) ---------- */
+
+details.self-check {
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 0.7rem 0.95rem;
+  margin: 0.7rem 0;
+  background: #fff;
+}
+details.self-check summary {
+  cursor: pointer;
+  font-family: var(--sans);
+  font-weight: 650;
+  font-size: 0.95rem;
+}
+details.self-check[open] summary { margin-bottom: 0.6rem; }
+details.self-check p:last-child { margin-bottom: 0; }
+
+/* ---------- Source & ask boxes ---------- */
+
+.source {
+  border: 1px solid var(--rule);
+  background: #fff;
+  border-radius: 6px;
+  padding: 1rem 1.15rem;
+  margin: 2.2rem 0 1rem;
+}
+.source .overline,
+.ask .overline {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 0.4rem;
+}
+.source > :last-child, .ask > :last-child { margin-bottom: 0; }
+
+.ask {
+  border: 1px solid var(--accent);
+  background: var(--accent-quiet);
+  border-radius: 6px;
+  padding: 1rem 1.15rem;
+  margin: 1rem 0 2rem;
+}
+
+/* ---------- Lesson footer / pager ---------- */
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2.6rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--sans);
+  font-size: 0.88rem;
+}
+.pager .upcoming { color: var(--ink-soft); }
+.pager .upcoming em { font-style: normal; font-weight: 650; color: var(--ink); }
+
+.site-foot {
+  margin-top: 2.4rem;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+/* ---------- Glossary reference ---------- */
+
+.gloss-group { margin: 2.2rem 0 0; }
+.gloss-group h2 { border-bottom: 1px solid var(--rule); padding-bottom: 0.4rem; }
+.term { margin: 1.1rem 0; }
+.term dt {
+  font-family: var(--sans);
+  font-weight: 650;
+  font-size: 1rem;
+}
+.term dd {
+  margin: 0.25rem 0 0;
+  color: var(--ink-soft);
+}
+.term .avoid {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--warn);
+  margin-top: 0.2rem;
+}
+
+/* ---------- Figures (embedded diagrams) ---------- */
+
+.figure { margin: 1.9rem 0; }
+.figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 8px; background: #fff; }
+.figure figcaption {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-top: 0.55rem;
+}
+.figure figcaption b { color: var(--ink); font-weight: 650; }
+
+/* ---------- Watch (video links) ---------- */
+
+.watch {
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: #fff;
+  padding: 1rem 1.15rem;
+  margin: 1.7rem 0;
+}
+.watch .overline {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.55rem;
+}
+.watch ul { list-style: none; margin: 0; padding: 0; }
+.watch li { position: relative; padding-left: 1.5rem; margin-bottom: 0.75rem; }
+.watch li:last-child { margin-bottom: 0; }
+.watch li::before {
+  content: "\25B6";
+  position: absolute;
+  left: 0.15rem;
+  top: 0.05rem;
+  font-size: 0.7rem;
+  color: var(--accent);
+}
+.watch a { font-family: var(--sans); font-weight: 650; }
+.watch .src { display: block; font-size: 0.84rem; color: var(--ink-soft); margin-top: 0.1rem; }
+
+/* ---------- Gallery (external image links) ---------- */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.8rem;
+  margin: 1.7rem 0;
+}
+.gallery a {
+  display: block;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 0.75rem 0.9rem;
+  text-decoration: none;
+  color: var(--ink);
+  background: #fff;
+  transition: border-color 0.12s ease, background 0.12s ease;
+}
+.gallery a:hover { border-color: var(--accent); background: var(--accent-quiet); }
+.gallery .g-title { display: block; font-family: var(--sans); font-weight: 650; font-size: 0.92rem; }
+.gallery .g-note { display: block; font-size: 0.82rem; color: var(--ink-soft); margin-top: 0.2rem; }
+.gallery .g-host { display: block; font-size: 0.74rem; color: var(--accent); margin-top: 0.35rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* ---------- Lesson index ---------- */
+
+.lesson-index { list-style: none; padding: 0; margin: 1.9rem 0; counter-reset: lesson; }
+.lesson-index li { margin: 0 0 0.65rem; }
+.lesson-index a {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.9rem;
+  align-items: baseline;
+  text-decoration: none;
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  background: #fff;
+  transition: border-color 0.12s ease, background 0.12s ease;
+}
+.lesson-index a:hover { border-color: var(--accent); background: var(--accent-quiet); }
+.lesson-index .n { font-family: var(--sans); font-weight: 700; color: var(--accent); min-width: 1.5rem; }
+.lesson-index .t { display: block; font-family: var(--sans); font-weight: 650; }
+.lesson-index .f { display: block; font-size: 0.85rem; color: var(--ink-soft); }
+.lesson-index .m { font-family: var(--sans); font-size: 0.8rem; color: var(--ink-soft); white-space: nowrap; }
+
+/* ---------- Print ---------- */
+
+@media print {
+  :root { --paper: #fff; }
+  body { font-size: 11pt; }
+  .wrap { max-width: none; padding: 0; }
+  .course-nav, .ask, .quiz-score, .site-foot { display: none; }
+  .callout, .drill, .quiz-q, .phase, .source { break-inside: avoid; }
+  a { color: var(--ink); text-decoration: none; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #555; }
+}
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 620px) {
+  .phase-strip { grid-template-columns: 1fr; }
+  h1 { font-size: 1.75rem; }
+}

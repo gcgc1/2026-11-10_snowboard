@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="st-t st-d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="st-t">The athletic stance versus a lazy stance</title>
+  <desc id="st-d">Left: an athletic snowboard stance with ankles, knees and hips softly flexed, torso upright, and hips stacked over the board. Right: the fault, bent at the waist with hips behind the board.</desc>
+
+  <line x1="450" y1="30" x2="450" y2="330" stroke="#dde5ec" stroke-width="1"/>
+
+  <!-- LEFT: athletic -->
+  <text x="225" y="46" text-anchor="middle" font-size="18" font-weight="700" fill="#17202a">Athletic stance</text>
+  <text x="225" y="66" text-anchor="middle" font-size="12.5" fill="#1a7f52">soft, stacked, ready</text>
+
+  <rect x="70" y="286" width="300" height="13" rx="6" fill="#e7eef6" stroke="#17202a" stroke-width="2"/>
+  <g stroke="#17202a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <polyline points="182,283 166,236 190,197"/>
+    <line x1="190" y1="197" x2="198" y2="150"/>
+    <line x1="198" y1="150" x2="220" y2="184"/>
+  </g>
+  <circle cx="202" cy="133" r="14" fill="#17202a"/>
+  <line x1="182" y1="283" x2="212" y2="283" stroke="#17202a" stroke-width="7" stroke-linecap="round"/>
+
+  <line x1="198" y1="150" x2="300" y2="118" stroke="#1f6feb" stroke-width="1.2"/>
+  <text x="306" y="114" font-size="12.5" fill="#1f6feb">torso upright</text>
+  <line x1="190" y1="197" x2="300" y2="196" stroke="#1f6feb" stroke-width="1.2"/>
+  <text x="306" y="192" font-size="12.5" fill="#1f6feb">hips over the board</text>
+  <line x1="166" y1="236" x2="120" y2="190" stroke="#1f6feb" stroke-width="1.2"/>
+  <text x="70" y="184" font-size="12.5" fill="#1f6feb">knees &amp; ankles flexed</text>
+
+  <!-- RIGHT: fault -->
+  <text x="675" y="46" text-anchor="middle" font-size="18" font-weight="700" fill="#17202a">Avoid</text>
+  <text x="675" y="66" text-anchor="middle" font-size="12.5" fill="#b3261e">bent at the waist, weight back</text>
+
+  <rect x="520" y="286" width="300" height="13" rx="6" fill="#f6e7e6" stroke="#17202a" stroke-width="2"/>
+  <g stroke="#b3261e" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <polyline points="632,283 624,236 606,204"/>
+    <line x1="606" y1="204" x2="672" y2="156"/>
+    <line x1="672" y1="156" x2="694" y2="190"/>
+  </g>
+  <circle cx="686" cy="142" r="14" fill="#b3261e"/>
+  <line x1="632" y1="283" x2="662" y2="283" stroke="#b3261e" stroke-width="7" stroke-linecap="round"/>
+  <line x1="606" y1="204" x2="596" y2="120" stroke="#b3261e" stroke-width="1.2"/>
+  <text x="602" y="116" font-size="12.5" fill="#b3261e">hips behind the board</text>
+</svg>
